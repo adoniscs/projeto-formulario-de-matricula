@@ -1,5 +1,6 @@
 .dropzone {
-    border: 1px dashed var(--stroke-default);
+    border: 2px dashed transparent;
+    outline: 1px dashed var(--stroke-default);
     border-radius: .25rem;
     display: grid;
     justify-items: center;
@@ -15,6 +16,8 @@
         height: 100%;
         inset: 0;
         opacity: 0;
+
+        cursor: pointer;
     }
 
     & p {
@@ -22,7 +25,7 @@
     }
 
     &:hover, &:has(input:focus) { /*&:has(input:focus) - ajusta para quando dar tab, ir para o próx input */
-        border-width: 2px;
+        outline-width: 0;
         border-color: var(--stroke-highlight);
         background-color: var(--surface-secondary);
 
